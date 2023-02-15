@@ -34,15 +34,19 @@ const clearFields = function () {
 };
 
 const injectTask = function (task) {
-  DOM.display.insertAdjacentHTML(
-    "beforeend",
-    `
+  if ((DOM.task.value = "")) {
+    DOM.display.innerHTML = "";
+  } else {
+    DOM.display.insertAdjacentHTML(
+      "beforeend",
+      `
     <div id = "card">
         <p id="task-text"> ${task} </p>
         <button id="remove"> Remove</button>
     </div>
     `
-  );
+    );
+  }
 };
 
 const injectMeal = function (breakfast, lunch, dinner) {
@@ -67,3 +71,5 @@ function removeTask() {
     });
   });
 }
+
+//maybe make a array withh all the fooodddd
