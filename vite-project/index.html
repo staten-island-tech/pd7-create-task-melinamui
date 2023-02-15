@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tada To-Do</title>
+  </head>
+  <body>
+    <div id="app">
+      <form id="form">
+        <div id="tasks">
+          <h1>To-Do List</h1>
+          <label for="add-task">Add Task</label>
+          <input type="text" id="add-task" />
+          <input type="submit" value="Add" id="add" />
+        </div>
+        <div id="meals">
+          <h1>Meal Tracker</h1>
+          <h2>Don't skip your meals!!</h2>
+
+          <label for="breakfast">Breakfast</label>
+          <input type="text" id="breakfast" />
+
+          <label for="lunch"> Lunch</label>
+          <input type="text" id="lunch" />
+
+          <label for="dinner">Dinner</label>
+          <input type="text" id="dinner" />
+          <input type="submit" value="Track" id="track" />
+        </div>
+      </form>
+      <div id="display"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
