@@ -18,19 +18,12 @@ DOM.form.addEventListener("submit", function (app) {
 
 function add() {
   let task = DOM.task.value;
-  let breakfast = DOM.breakfast.value;
-  let lunch = DOM.lunch.value;
-  let dinner = DOM.dinner.value;
   injectTask(task);
-  injectMeal(breakfast, lunch, dinner);
   clearFields();
   removeTask();
 }
 const clearFields = function () {
   DOM.task.value = "";
-  DOM.breakfast.value = "";
-  DOM.lunch.value = "";
-  DOM.dinner.value = "";
 };
 
 const injectTask = function (task) {
@@ -47,20 +40,6 @@ const injectTask = function (task) {
     `
     );
   }
-};
-
-const injectMeal = function (breakfast, lunch, dinner) {
-  DOM.display.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div id = "card">
-        <p id="task-text"> ${breakfast} </p>
-        <p id="task-text"> ${lunch} </p>
-        <p id="task-text"> ${dinner} </p>
-        <button id="remove"> Remove</button>
-    </div>
-    `
-  );
 };
 
 function removeTask() {
