@@ -27,19 +27,15 @@ const clearFields = function () {
 };
 
 const injectTask = function (task) {
-  if ((DOM.task.value = "")) {
-    DOM.display.innerHTML = "";
-  } else {
-    DOM.display.insertAdjacentHTML(
-      "beforeend",
-      `
-    <div id = "card">
+  DOM.display.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div id = "child">
         <p id="task-text"> ${task} </p>
         <button id="remove"> Remove</button>
     </div>
     `
-    );
-  }
+  );
 };
 
 function removeTask() {
@@ -52,3 +48,4 @@ function removeTask() {
 }
 
 //maybe make a array withh all the fooodddd
+// completed tasks
