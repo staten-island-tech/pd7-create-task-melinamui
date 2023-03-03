@@ -2,15 +2,15 @@ import "./style.css";
 
 const DOM = {
   btn: document.getElementsByClassName("btn"),
-  form : document.getElementById("form"),
+  form: document.getElementById("form"),
 };
 
-let userInput = DOM.btn.value;
+let userInput = document.getElementById("beef").value;
 const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${userInput}`;
 
 DOM.form.addEventListener("submit", getRecipe);
 
-async function getRecipe() {  
+async function getRecipe() {
   try {
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
@@ -36,16 +36,6 @@ async function getRecipe() {
       "Sorry, something went wrong.";
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 /*document.write(Date());
 
