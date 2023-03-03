@@ -5,21 +5,34 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Tada To-Do</title>
+    <title>Meat Recipe Finder</title>
   </head>
   <body>
     <div id="app">
-      <form id="form">
-        <div id="tasks">
-          <h1>To-Do List</h1>
-          <label for="add-task">Add Task</label>
-          <input type="text" id="add-task" required />
-          <input type="submit" value="Add" id="add" />
-        </div>
-      </form>
-      <div id="parent"></div>
+     <!-- <div id="categories">
+        <button class="btn" id="beef">Beef</button>
+        <button class="btn" id="chicken">Chicken</button>
+        <button class="btn" id="goat">Goat</button>
+        <button class="btn" id="lamb">Lamb</button>
+        <button class="btn" id="pork">Pork</button>
+        <button class="btn" id="seafood">Seafood</button>
+        <button class="btn" id="vegan">Vegan</button>
+      </div>-->
+      <form id ="form">
+      <div id ="categories">
+        <button class="btn" type ="submit" value="beef">Beef</button>
+        <button class="btn" type ="submit" value="chicken">Chicken</button>
+        <button class="btn" type ="submit" value="goat">Goat</button>
+        <button class="btn" type ="submit" value="lamb">Lamb</button>
+        <button class="btn" type ="submit" value="pork">Pork</button>
+        <button class="btn" type ="submit" value="seafood">Seafood</button>
+        <button class="btn" type ="submit" value="vegan">Vegan</button>      
+      </div>
+    </form>
       <div id="display"></div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
+

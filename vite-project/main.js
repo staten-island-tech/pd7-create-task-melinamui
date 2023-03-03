@@ -1,6 +1,53 @@
 import "./style.css";
 
-document.write(Date());
+const DOM = {
+  btn: document.getElementsByClassName("btn"),
+  form : document.getElementById("form"),
+};
+
+let userInput = DOM.btn.value;
+const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${userInput}`;
+
+DOM.form.addEventListener("submit", getRecipe);
+
+async function getRecipe() {  
+  try {
+    const response = await fetch(meat);
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
+      throw error(response);
+    } else {
+      const data = await response.json();
+      document.getElementById("display").innerHTMl = "";
+      data.meals.forEach((dish) => {
+        document.getElementById("display").insertAdjacentHTML(
+          "beforeend",
+          `<div id="card">
+          <h1>${dish.strMeal}</h1>
+          <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
+          </div>`
+        );
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    console.log("Sorry, something went wrong.");
+    document.getElementById("display").textContent =
+      "Sorry, something went wrong.";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*document.write(Date());
 
 const DOM = {
   form: document.getElementById("form"),
@@ -45,7 +92,7 @@ function removeTask() {
       e.target.parentElement.remove();
     });
   });
-}
+}*/
 
 //maybe make a array withh all the fooodddd
 // completed tasks
