@@ -8,32 +8,31 @@ const DOM = {
 
 //let user = DOM.btn.value;
 
-//const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
-
 /*ingredient.forEach(item => {
 
 })*/
 
-const links = [
-  {beef: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",},
-  {chicken:"https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",},
-  {goat: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",},
-  {lamb: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",},
-  {pork: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",},
-  {seafood: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",},
-  {vegan: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",},
-];
+/*const links = [
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",,
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",,
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
+];*/
 
-let meat ="<ul>";
-links.forEach(getRecipe);
-meat += "</ul>";
+const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
 
+let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
+ingredient.forEach(getRecipe);
+meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
 
 document.getElementById("beef").addEventListener("click", getRecipe);
 
 async function getRecipe(value) {
   try {
-    meat += "<li>" + value + "</li>";
+    meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}` + value + `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
