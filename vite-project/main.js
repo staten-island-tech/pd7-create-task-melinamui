@@ -1,20 +1,23 @@
 import "./style.css";
 
 const DOM = {
-  btn: document.getElementById("btn"),
-  form: document.getElementById("form"),
+  btn: document.getElementsByClassName("btn"),
+  //form: document.getElementById("form"),
   categories: document.getElementById("categories"),
 };
 
-let user = DOM.btn.value;
-const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${user}`;
+//let user = DOM.btn.value;
+const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
+
+const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
 
 //DOM.form.addEventListener("submit", getRecipe);
 
-DOM.form.addEventListener("submit", function (e) {
+/*DOM.form.addEventListener("submit", function (e) {
   getRecipe();
   e.preventDefault();
-});
+});*/
+DOM.btn.addEventlistener("click", getRecipe);
 
 async function getRecipe() {
   try {
@@ -42,7 +45,7 @@ async function getRecipe() {
       "Sorry, something went wrong.";
   }
 }
-
+// make an array idk anymore, i dont think form is going to work
 /*document.write(Date());
 
 const DOM = {
