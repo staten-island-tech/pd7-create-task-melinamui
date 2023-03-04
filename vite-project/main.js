@@ -5,7 +5,7 @@ const DOM = {
   form: document.getElementById("form"),
 };
 
-let user = DOM.btn.value;
+let user = DOM.form.value;
 const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${user}`;
 
 //DOM.form.addEventListener("submit", getRecipe);
