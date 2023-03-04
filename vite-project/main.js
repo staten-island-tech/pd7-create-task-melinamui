@@ -18,7 +18,7 @@ const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}
   e.preventDefault();
 });*/
 
-DOM.btn.addEventListener("click", getRecipe);
+document.getElementById("beef").addEventListener("click", getRecipe);
 
 async function getRecipe() {
   try {
