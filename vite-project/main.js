@@ -34,7 +34,6 @@ async function getRecipe() {
           </div>`
         );
       });
-      DOM.btn.value = "";
     }
   } catch (error) {
     console.log(error);
