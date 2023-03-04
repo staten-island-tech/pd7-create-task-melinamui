@@ -8,7 +8,12 @@ const DOM = {
 let user = DOM.btn.value;
 const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${user}`;
 
-DOM.form.addEventListener("submit", getRecipe);
+//DOM.form.addEventListener("submit", getRecipe);
+
+DOM.form.addEventListener("submit", function (e) {
+  getRecipe();
+  e.preventDefault();
+});
 
 async function getRecipe() {
   try {
