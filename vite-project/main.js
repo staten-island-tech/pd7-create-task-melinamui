@@ -3,9 +3,10 @@ import "./style.css";
 const DOM = {
   btn: document.getElementById("btn"),
   form: document.getElementById("form"),
+  categories: document.getElementById("categories"),
 };
 
-let user = DOM.form.value;
+let user = DOM.categories.value;
 const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${user}`;
 
 //DOM.form.addEventListener("submit", getRecipe);
