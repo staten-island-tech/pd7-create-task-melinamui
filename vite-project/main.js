@@ -7,16 +7,22 @@ const DOM = {
 };
 
 //let user = DOM.btn.value;
-const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
 
-const meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
+//const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
 
-//DOM.form.addEventListener("submit", getRecipe);
+/*ingredient.forEach(item => {
 
-/*DOM.form.addEventListener("submit", function (e) {
-  getRecipe();
-  e.preventDefault();
-});*/
+})*/
+
+const meat = [
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
+];
 
 document.getElementById("beef").addEventListener("click", getRecipe);
 
@@ -47,6 +53,14 @@ async function getRecipe() {
   }
 }
 // make an array idk anymore, i dont think form is going to work
+
+//DOM.form.addEventListener("submit", getRecipe);
+
+/*DOM.form.addEventListener("submit", function (e) {
+  getRecipe();
+  e.preventDefault();
+});*/
+
 /*document.write(Date());
 
 const DOM = {
