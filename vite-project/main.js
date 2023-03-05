@@ -5,30 +5,132 @@ import "./style.css";
   //form: document.getElementById("form"),
   categories: document.getElementById("categories"),
 };*/
-
-const links = [
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
-];
-
-let meat = ``;
-links.forEach(getRecipe);
-meat += ``;
-
-document.getElementById("beef").addEventListener("click", getRecipe);
-
-async function getRecipe() {
-  try {
     //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
     //let meat = link += `${ingredient}`;
 
-    //let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
-    meat += `` + value + ``;
+document.getElementById("beef").addEventListener("click", getBeef);
+document.getElementById("chicken").addEventListener("click", getChicken);
+document.getElementById("chicken").addEventListener("click", getPork);
+document.getElementById("chicken").addEventListener("click", getLamb);
+document.getElementById("chicken").addEventListener("click", getSeafood);
+
+
+
+async function getBeef() {
+  try {
+    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
+    const response = await fetch(meat);
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
+      throw error(response);
+    } else {
+      const data = await response.json();
+      document.getElementById("display").innerHTMl = "";
+      data.meals.forEach((dish) => {
+        document.getElementById("display").insertAdjacentHTML(
+          "beforeend",
+          `<div id="card">
+          <h1>${dish.strMeal}</h1>
+          <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
+          </div>`
+        );
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    console.log("Sorry, something went wrong.");
+    document.getElementById("display").textContent =
+      "Sorry, something went wrong.";
+  }
+}
+
+async function getChicken() {
+  try {
+    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken"
+    const response = await fetch(meat);
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
+      throw error(response);
+    } else {
+      const data = await response.json();
+      document.getElementById("display").innerHTMl = "";
+      data.meals.forEach((dish) => {
+        document.getElementById("display").insertAdjacentHTML(
+          "beforeend",
+          `<div id="card">
+          <h1>${dish.strMeal}</h1>
+          <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
+          </div>`
+        );
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    console.log("Sorry, something went wrong.");
+    document.getElementById("display").textContent =
+      "Sorry, something went wrong.";
+  }
+}
+
+async function getPork() {
+  try {
+    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=pork"
+    const response = await fetch(meat);
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
+      throw error(response);
+    } else {
+      const data = await response.json();
+      document.getElementById("display").innerHTMl = "";
+      data.meals.forEach((dish) => {
+        document.getElementById("display").insertAdjacentHTML(
+          "beforeend",
+          `<div id="card">
+          <h1>${dish.strMeal}</h1>
+          <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
+          </div>`
+        );
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    console.log("Sorry, something went wrong.");
+    document.getElementById("display").textContent =
+      "Sorry, something went wrong.";
+  }
+}
+
+async function getLamb() {
+  try {
+    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=lamb"
+    const response = await fetch(meat);
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
+      throw error(response);
+    } else {
+      const data = await response.json();
+      document.getElementById("display").innerHTMl = "";
+      data.meals.forEach((dish) => {
+        document.getElementById("display").insertAdjacentHTML(
+          "beforeend",
+          `<div id="card">
+          <h1>${dish.strMeal}</h1>
+          <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
+          </div>`
+        );
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    console.log("Sorry, something went wrong.");
+    document.getElementById("display").textContent =
+      "Sorry, something went wrong.";
+  }
+}
+
+async function getSeafood() {
+  try {
+    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood"
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
