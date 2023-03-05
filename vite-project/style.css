@@ -1,11 +1,13 @@
 @import url(variables.css);
 
 #app {
+    background-color: pink;
+    font-size: 2vh;
+    color: deeppink;
     text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+    padding: 2vh;
+    margin: 2%;
+  }
 
 #display {
     display: flex;
