@@ -7,10 +7,6 @@
     flex-direction: column;
 }
 
-#display {
-    padding-bottom: 30px;
-}
-
 #card {
     display: flex;
     align-items: center;
@@ -19,6 +15,7 @@
     width: 80%;
     height: 100%;
     margin: auto;
+    padding-bottom: 30px;
 }
 
 #image {
