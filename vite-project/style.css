@@ -3,11 +3,10 @@
 
 #card {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     background-color: white;
-    width: 50%;
+    background-size: 50%;
     height: 100%;
     padding: 30px;
 }
