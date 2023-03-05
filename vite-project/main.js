@@ -50,9 +50,9 @@ async function getBeef() {
           <button id="remove">Not a Fan</button>
           `
         );
+        dish.strMeal.value = null;
+        dish.strMealThumb.value= null;
       });
-      dish.strMeal.value = "";
-      dish.strMealThumb.value="";
     }
   } catch (error) {
     console.log(error);
