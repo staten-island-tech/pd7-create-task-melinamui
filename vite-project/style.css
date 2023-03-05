@@ -9,13 +9,10 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin: auto;
-}
-
-#display {
-    padding: 30px;
+    padding-bottom: 30px;
 }
 
 #image {
