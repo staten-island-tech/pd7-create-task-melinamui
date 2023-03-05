@@ -88,14 +88,14 @@ async function getChicken() {
 async function getPork() {
   try {
     let pork = "https://www.themealdb.com/api/json/v1/1/filter.php?c=pork"
-    const response = await fetch(pork);
-    if (response.status < 200 || response.status > 299) {
-      console.log(response.status);
-      throw error(response);
+    const response3 = await fetch(pork);
+    if (response3.status < 200 || response3.status > 299) {
+      console.log(response3.status);
+      throw error(response3);
     } else {
-      const data = await response.json();
+      const data3 = await response3.json();
       document.getElementById("display").innerHTMl = "";
-      data.meals.forEach((dish) => {
+      data3.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
           `<div id="card">
@@ -116,14 +116,14 @@ async function getPork() {
 async function getLamb() {
   try {
     let lamb = "https://www.themealdb.com/api/json/v1/1/filter.php?c=lamb"
-    const response = await fetch(lamb);
-    if (response.status < 200 || response.status > 299) {
-      console.log(response.status);
-      throw error(response);
+    const response4 = await fetch(lamb);
+    if (response4.status < 200 || response4.status > 299) {
+      console.log(response4status);
+      throw error(response4);
     } else {
-      const data = await response.json();
+      const data4 = await response4.json();
       document.getElementById("display").innerHTMl = "";
-      data.meals.forEach((dish) => {
+      data4.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
           `<div id="card">
@@ -144,14 +144,14 @@ async function getLamb() {
 async function getSeafood() {
   try {
     let seafood = "https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood"
-    const response = await fetch(seafood);
-    if (response.status < 200 || response.status > 299) {
-      console.log(response.status);
-      throw error(response);
+    const response5 = await fetch(seafood);
+    if (response5.status < 200 || response5.status > 299) {
+      console.log(response5.status);
+      throw error(response5);
     } else {
-      const data = await response.json();
+      const data5 = await response5.json();
       document.getElementById("display").innerHTMl = "";
-      data.meals.forEach((dish) => {
+      data5.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
           `<div id="card">
