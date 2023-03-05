@@ -51,6 +51,8 @@ async function getBeef() {
           `
         );
       });
+      dish.strMeal.value = "";
+      dish.strMealThumb.value="";
     }
   } catch (error) {
     console.log(error);
@@ -60,9 +62,6 @@ async function getBeef() {
   }
 }
 getBeef();
-
-dish.strMeal.value = "";
-dish.strMealThumb.value="";
 
 function removeButtons() {
   let remove = document.querySelectorAll("#remove");
