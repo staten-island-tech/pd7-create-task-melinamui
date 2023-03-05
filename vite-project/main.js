@@ -8,11 +8,11 @@ import "./style.css";
     //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
     //let meat = link += `${ingredient}`;
 
-document.getElementById("beef").addEventListener("click", getBeef);
-document.getElementById("chicken").addEventListener("click", getChicken);
-document.getElementById("pork").addEventListener("click", getPork);
-document.getElementById("lamb").addEventListener("click", getLamb);
-document.getElementById("seafood").addEventListener("click", getSeafood);
+//document.getElementById("beef").addEventListener("click", getBeef);
+//document.getElementById("chicken").addEventListener("click", getChicken);
+//document.getElementById("pork").addEventListener("click", getPork);
+//document.getElementById("lamb").addEventListener("click", getLamb);
+//document.getElementById("seafood").addEventListener("click", getSeafood);
 
 //const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"] = await Promise.all
 
@@ -21,6 +21,8 @@ document.getElementById("seafood").addEventListener("click", getSeafood);
     const res = await fetch 
   })
 )*/
+
+//remove button
 
 async function getBeef() {
   try {
@@ -32,13 +34,13 @@ async function getBeef() {
       }))*/
     document.getElementById("display").innerHTMl = "";
     let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
-    const response1 = await fetch(beef);
-    if (response1.status < 200 || response1.status > 299) {
-      console.log(response1.status);
-      throw error(response1);
+    const response = await fetch(beef);
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
+      throw error(response);
     } else {
-      const data1 = await response1.json();
-      data1.meals.forEach((dish) => {
+      const data = await response.json();
+      data.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
           `<div id="card">
@@ -55,7 +57,7 @@ async function getBeef() {
       "Sorry, something went wrong.";
   }
 }
-
+/*
 async function getChicken() {
   try {
     document.getElementById("display").innerHTMl = "";
@@ -167,7 +169,7 @@ async function getSeafood() {
     document.getElementById("display").textContent =
       "Sorry, something went wrong.";
   }
-}
+}*/
 
 
 
