@@ -61,6 +61,8 @@ async function getBeef() {
 }
 getBeef();
 
+document.getElementById("card").value = "";
+
 function removeButtons() {
   let remove = document.querySelectorAll("#remove");
   remove.forEach((card) => {
