@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
 }
 
 #card {
@@ -16,6 +15,9 @@
     width: 80%;
     height: 100%;
     margin: auto;
+    padding: 30px;
+    border-color: red;
+    border-bottom: 5rem;
 }
 
 #image {

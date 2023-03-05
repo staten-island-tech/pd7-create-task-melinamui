@@ -42,7 +42,6 @@ async function getBeef() {
         let remove = document.querySelectorAll("#remove");
         remove.forEach((card) => {
           card.addEventListener("click", function (event) {
-            //document.getElementById("card").remove();
             event.target.parentElement.remove();
           });
         });
