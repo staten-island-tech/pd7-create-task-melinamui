@@ -50,8 +50,6 @@ async function getBeef() {
           <button id="remove">Not a Fan</button>
           `
         );
-        dish.strMeal.value = null;
-        dish.strMealThumb.value= null;
       });
     }
   } catch (error) {
@@ -67,7 +65,7 @@ function removeButtons() {
   let remove = document.querySelectorAll("#remove");
   remove.forEach((card) => {
     card.addEventListener("click", function (event) {
-      event.target.parentElement.remove();
+      event.getElementById("card").remove();
     });
   });
 }
