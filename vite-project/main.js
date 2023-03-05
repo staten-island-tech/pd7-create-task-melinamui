@@ -61,13 +61,11 @@ async function getBeef() {
 }
 getBeef();
 
-document.getElementById("card").value = "";
-
 function removeButtons() {
   let remove = document.querySelectorAll("#remove");
   remove.forEach((card) => {
-    card.addEventListener("click", function (event) {
-      event.target.getElementById("card").remove();
+    card.addEventListener("click", function () {
+      document.getElementById("card").remove();
     });
   });
 }
