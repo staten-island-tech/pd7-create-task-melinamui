@@ -14,10 +14,23 @@ document.getElementById("pork").addEventListener("click", getPork);
 document.getElementById("lamb").addEventListener("click", getLamb);
 document.getElementById("seafood").addEventListener("click", getSeafood);
 
+//const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"] = await Promise.all
 
+/*const getAll = await Promise.all(
+  ingredient.map(async meat => {
+    const res = await fetch 
+  })
+)*/
 
 async function getBeef() {
   try {
+    /*const getAll = await Promise.all(
+      ingredient.map(async meat => {
+        const response = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${meat}`
+        ) 
+      }))*/
+    document.getElementById("display").innerHTMl = "";
     let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
     const response = await fetch(beef);
     if (response.status < 200 || response.status > 299) {
@@ -25,7 +38,6 @@ async function getBeef() {
       throw error(response);
     } else {
       const data = await response.json();
-      document.getElementById("display").innerHTMl = "";
       data.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
@@ -46,6 +58,7 @@ async function getBeef() {
 
 async function getChicken() {
   try {
+    document.getElementById("display").innerHTMl = "";
     let chicken = "https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken"
     const response = await fetch(chicken);
     if (response.status < 200 || response.status > 299) {
@@ -155,6 +168,7 @@ async function getSeafood() {
       "Sorry, something went wrong.";
   }
 }
+
 
 
 //let user = DOM.btn.value;
