@@ -5,6 +5,17 @@ document.getElementById("reload").addEventListener("click", function(){
   location.reload();
 });
 
+document.getElementById("theme").addEventListener("click", function () {
+  if (document.body.classList.contains("normal")) {
+    document.body.classList.add("cow");
+    document.body.classList.remove("normal");
+  } else {
+    document.body.classList.add("normal");
+    document.body.classList.remove("cow");
+  }
+});
+
+
 //Using an API to get Beef Recipes
 async function getBeef() {
   try {
