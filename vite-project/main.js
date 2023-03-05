@@ -57,6 +57,7 @@ async function getBeef() {
       "Sorry, something went wrong.";
   }
 }
+getBeef();
 /*
 async function getChicken() {
   try {
