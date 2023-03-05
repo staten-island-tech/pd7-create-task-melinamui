@@ -1,41 +1,13 @@
 import "./style.css";
 
-/*const DOM = {
-  btn: document.getElementsByClassName("btn"),
-  //form: document.getElementById("form"),
-  categories: document.getElementById("categories"),
-};*/
-    //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
-    //let meat = link += `${ingredient}`;
-
-//document.getElementById("beef").addEventListener("click", getBeef);
-//document.getElementById("chicken").addEventListener("click", getChicken);
-//document.getElementById("pork").addEventListener("click", getPork);
-//document.getElementById("lamb").addEventListener("click", getLamb);
-//document.getElementById("seafood").addEventListener("click", getSeafood);
-
-//const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"] = await Promise.all
-
-/*const getAll = await Promise.all(
-  ingredient.map(async meat => {
-    const res = await fetch 
-  })
-)*/
-
-//remove button
-
+//Restart Button
 document.getElementById("reload").addEventListener("click", function(){
   location.reload();
-})
+});
 
+//Using an API to get Beef Recipes
 async function getBeef() {
   try {
-    /*const getAll = await Promise.all(
-      ingredient.map(async meat => {
-        const response = await fetch(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${meat}`
-        ) 
-      }))*/
     document.getElementById("display").innerHTMl = "";
     let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
     const response = await fetch(beef);
@@ -73,6 +45,38 @@ async function getBeef() {
   }
 }
 getBeef();
+
+
+
+    /*const getAll = await Promise.all(
+      ingredient.map(async meat => {
+        const response = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${meat}`
+        ) 
+      }))*/
+/*const DOM = {
+  btn: document.getElementsByClassName("btn"),
+  //form: document.getElementById("form"),
+  categories: document.getElementById("categories"),
+};*/
+    //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
+    //let meat = link += `${ingredient}`;
+
+//document.getElementById("beef").addEventListener("click", getBeef);
+//document.getElementById("chicken").addEventListener("click", getChicken);
+//document.getElementById("pork").addEventListener("click", getPork);
+//document.getElementById("lamb").addEventListener("click", getLamb);
+//document.getElementById("seafood").addEventListener("click", getSeafood);
+
+//const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"] = await Promise.all
+
+/*const getAll = await Promise.all(
+  ingredient.map(async meat => {
+    const res = await fetch 
+  })
+)*/
+
+//remove button
 
 /*
 async function getChicken() {
