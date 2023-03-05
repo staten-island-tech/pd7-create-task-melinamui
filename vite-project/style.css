@@ -2,7 +2,6 @@
 
 #app {
     text-align: center;
-    padding: 30px;
 }
 
 #card {
@@ -12,6 +11,7 @@
     background-color: white;
     width: 70%;
     margin: auto;
+    gap: 30px;
 }
 
 #image {
