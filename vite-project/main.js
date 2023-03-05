@@ -1,57 +1,20 @@
 import "./style.css";
 
-const DOM = {
+/*const DOM = {
   btn: document.getElementsByClassName("btn"),
   //form: document.getElementById("form"),
   categories: document.getElementById("categories"),
-};
+};*/
 
-//let user = DOM.btn.value;
 
-/*ingredient.forEach(item => {
-
-})*/
-
-/*const links = [
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",,
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",,
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
-  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
-];*/
-
-const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
-let link = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
-//let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
-//ingredient.forEach(getRecipe);
-//meat += `${ingredient}`;
-
-/*function createLink() {
-  //ingredient.forEach(link += ingredient)};
-  ingredient.forEach(getRecipe) {
-    let meat = ingredient.forEach(link + ingredient)
-
-  }};
-console.log(createLink);*/
-
-//ingredient.forEach(getRecipe);
 
 document.getElementById("beef").addEventListener("click", getRecipe);
-
-//ingredient.forEach(async (combined) => {
- // meat = await getRecipe()
-//})
-
-ingredient.forEach(() => {
-  console.log(link += `${ingredient}`)
-});
 
 async function getRecipe() {
   try {
     //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
     //let meat = link += `${ingredient}`;
+    let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=beef`
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
@@ -76,6 +39,48 @@ async function getRecipe() {
       "Sorry, something went wrong.";
   }
 }
+
+
+//let user = DOM.btn.value;
+
+/*ingredient.forEach(item => {
+
+})*/
+
+/*const links = [
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",,
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",,
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
+];*/
+
+//const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
+//let link = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
+//let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
+//ingredient.forEach(getRecipe);
+//meat += `${ingredient}`;
+
+/*function createLink() {
+  //ingredient.forEach(link += ingredient)};
+  ingredient.forEach(getRecipe) {
+    let meat = ingredient.forEach(link + ingredient)
+
+  }};
+console.log(createLink);*/
+
+//ingredient.forEach(getRecipe);
+
+//ingredient.forEach(async (combined) => {
+ // meat = await getRecipe()
+//})
+/*
+ingredient.forEach(() => {
+  console.log(link += `${ingredient}`)
+});*/
+
 // make an array idk anymore, i dont think form is going to work
 
 //DOM.form.addEventListener("submit", getRecipe);
