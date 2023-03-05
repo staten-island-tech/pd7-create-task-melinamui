@@ -1,1 +1,12 @@
 @import url(variables.css);
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+#card {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
