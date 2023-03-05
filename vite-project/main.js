@@ -24,6 +24,10 @@ import "./style.css";
 
 //remove button
 
+document.getElementById("reload").addEventListener(click, function(){
+  location.reload();
+})
+
 async function getBeef() {
   try {
     /*const getAll = await Promise.all(
