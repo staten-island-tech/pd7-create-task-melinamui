@@ -24,7 +24,7 @@ import "./style.css";
 
 //remove button
 
-document.getElementById("reload").addEventListener(click, function(){
+document.getElementById("reload").addEventListener("click", function(){
   location.reload();
 })
 
