@@ -16,7 +16,9 @@ const links = [
   "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
 ];
 
+let meat = ``;
 links.forEach(getRecipe);
+meat += ``;
 
 document.getElementById("beef").addEventListener("click", getRecipe);
 
@@ -26,7 +28,8 @@ async function getRecipe() {
     //let meat = link += `${ingredient}`;
 
     //let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
-    const response = await fetch(links);
+    meat += `` + value + ``;
+    const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
