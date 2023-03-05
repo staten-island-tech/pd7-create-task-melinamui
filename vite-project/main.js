@@ -24,15 +24,15 @@ const DOM = {
 
 const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
 
-let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
+let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 ingredient.forEach(getRecipe);
-meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
+meat += `${ingredient}`;
 
 document.getElementById("beef").addEventListener("click", getRecipe);
 
 async function getRecipe(value) {
   try {
-    meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}` + value + `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
+    meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
