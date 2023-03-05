@@ -51,6 +51,15 @@ async function getBeef() {
           `
         );
       });
+      function removeButtons() {
+        let remove = document.querySelectorAll("#remove");
+        remove.forEach((card) => {
+          card.addEventListener("click", function () {
+            document.getElementById("card").remove();
+          });
+        });
+      }
+      removeButtons();
     }
   } catch (error) {
     console.log(error);
@@ -60,16 +69,6 @@ async function getBeef() {
   }
 }
 getBeef();
-
-function removeButtons() {
-  let remove = document.querySelectorAll("#remove");
-  remove.forEach((card) => {
-    card.addEventListener("click", function (event) {
-      event.document.getElementById("card").remove();
-    });
-  });
-}
-removeButtons();
 
 /*
 async function getChicken() {
