@@ -60,7 +60,8 @@ async function getBeef() {
   }
 }
 getBeef();
-document.querySelectorAll("#card").value = null;
+document.querySelectorAll("#card").value = "";
+
 function removeButtons() {
   let remove = document.querySelectorAll("#remove");
   remove.forEach((card) => {
