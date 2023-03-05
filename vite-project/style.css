@@ -1,12 +1,18 @@
 @import url(variables.css);
 
+#app {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 #card {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: white;
-    background-size: 10%;
+    width: 50%;
     height: 100%;
     padding: 30px;
 }
