@@ -32,12 +32,12 @@ async function getBeef() {
       }))*/
     document.getElementById("display").innerHTMl = "";
     let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
-    const response = await fetch(beef);
-    if (response.status < 200 || response.status > 299) {
-      console.log(response.status);
-      throw error(response);
+    const response1 = await fetch(beef);
+    if (response1.status < 200 || response1.status > 299) {
+      console.log(response1.status);
+      throw error(response1);
     } else {
-      const data1 = await response.json();
+      const data1 = await response1.json();
       data1.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
@@ -60,12 +60,12 @@ async function getChicken() {
   try {
     document.getElementById("display").innerHTMl = "";
     let chicken = "https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken"
-    const response = await fetch(chicken);
-    if (response.status < 200 || response.status > 299) {
-      console.log(response.status);
-      throw error(response);
+    const response2 = await fetch(chicken);
+    if (response2.status < 200 || response2.status > 299) {
+      console.log(response2.status);
+      throw error(response2);
     } else {
-      const data2 = await response.json();
+      const data2 = await response2.json();
       document.getElementById("display").innerHTMl = "";
       data2.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
