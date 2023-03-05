@@ -50,8 +50,6 @@ async function getBeef() {
           <button id="remove">Not a Fan</button>
           `
         );
-        dish.strMeal.value = "";
-        dish.strMealThumb.value="";
       });
     }
   } catch (error) {
@@ -62,6 +60,9 @@ async function getBeef() {
   }
 }
 getBeef();
+
+dish.strMeal.value = "";
+dish.strMealThumb.value="";
 
 function removeButtons() {
   let remove = document.querySelectorAll("#remove");
