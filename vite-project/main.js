@@ -6,7 +6,17 @@ import "./style.css";
   categories: document.getElementById("categories"),
 };*/
 
+const links = [
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Goat",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
+  "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan",
+];
 
+links.forEach(getRecipe);
 
 document.getElementById("beef").addEventListener("click", getRecipe);
 
@@ -15,8 +25,8 @@ async function getRecipe() {
     //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
     //let meat = link += `${ingredient}`;
 
-    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
-    const response = await fetch(meat);
+    //let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
+    const response = await fetch(links);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
