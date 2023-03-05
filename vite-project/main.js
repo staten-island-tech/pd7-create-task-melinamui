@@ -46,8 +46,8 @@ async function getBeef() {
           `<div id="card">
           <h1>${dish.strMeal}</h1>
           <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
-          </div>
           <button id="remove">Not a Fan</button>
+          </div>
           `
         );
       });
