@@ -16,3 +16,7 @@
     height: 100%;
     padding: 30px;
 }
+
+img {
+    size: 50%;
+}
