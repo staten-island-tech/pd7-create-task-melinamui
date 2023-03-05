@@ -45,7 +45,7 @@ document.getElementById("beef").addEventListener("click", getRecipe);
 //})
 
 ingredient.forEach(() => {
-  console.log(`link += ${ingredient}`)
+  console.log(link += `${ingredient}`)
 });
 
 async function getRecipe() {
