@@ -5,13 +5,14 @@
 }
 
 #card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     background-color: white;
     background-size: 70%;
     width: 70%;
     margin: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: 30px;
 }
 
