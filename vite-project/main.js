@@ -23,16 +23,27 @@ const DOM = {
 ];*/
 
 const ingredient = ["Beef", "Chicken", "Goat", "Lamb", "Pork", "Seafood", "Vegan"]; 
+let link = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
+//let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
+//ingredient.forEach(getRecipe);
+//meat += `${ingredient}`;
 
-let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
+/*function createLink() {
+  //ingredient.forEach(link += ingredient)};
+  ingredient.forEach(getRecipe) {
+    let meat = ingredient.forEach(link + ingredient)
+
+  }};
+console.log(createLink);*/
+
 ingredient.forEach(getRecipe);
-meat += `${ingredient}`;
 
 document.getElementById("beef").addEventListener("click", getRecipe);
 
-async function getRecipe(value) {
+async function getRecipe() {
   try {
-    meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
+    //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
+    let meat = link += `${ingredient}`;
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
