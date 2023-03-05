@@ -6,9 +6,8 @@
 
 #card {
     background-color: white;
-    background-size: 70%;
     width: 70%;
-    margin: auto;
+    margin: 1rem auto;
 
     display: flex;
     align-items: center;
