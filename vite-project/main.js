@@ -37,8 +37,8 @@ async function getBeef() {
       console.log(response.status);
       throw error(response);
     } else {
-      const data = await response.json();
-      data.meals.forEach((dish) => {
+      const data1 = await response.json();
+      data1.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
           `<div id="card">
@@ -65,9 +65,9 @@ async function getChicken() {
       console.log(response.status);
       throw error(response);
     } else {
-      const data = await response.json();
+      const data2 = await response.json();
       document.getElementById("display").innerHTMl = "";
-      data.meals.forEach((dish) => {
+      data2.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
           `<div id="card">
