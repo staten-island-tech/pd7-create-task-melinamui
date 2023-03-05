@@ -46,7 +46,9 @@ async function getBeef() {
           `<div id="card">
           <h1>${dish.strMeal}</h1>
           <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
-          </div>`
+          </div>
+          <button id="remove">Not a Fan</button>
+          `
         );
       });
     }
@@ -58,6 +60,17 @@ async function getBeef() {
   }
 }
 getBeef();
+
+function removeButtons() {
+  let remove = document.querySelectorAll("#remove");
+  remove.forEach((card) => {
+    card.addEventListener("click", function (event) {
+      event.target.parentElement.remove();
+    });
+  });
+}
+removeButtons();
+
 /*
 async function getChicken() {
   try {
