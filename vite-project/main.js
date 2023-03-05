@@ -65,7 +65,7 @@ function removeButtons() {
   let remove = document.querySelectorAll("#remove");
   remove.forEach((card) => {
     card.addEventListener("click", function (event) {
-      event.getElementById("card").remove();
+      event.target.getElementById("card").remove();
     });
   });
 }
