@@ -18,8 +18,8 @@ document.getElementById("seafood").addEventListener("click", getSeafood);
 
 async function getBeef() {
   try {
-    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
-    const response = await fetch(meat);
+    let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
+    const response = await fetch(beef);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
@@ -46,8 +46,8 @@ async function getBeef() {
 
 async function getChicken() {
   try {
-    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken"
-    const response = await fetch(meat);
+    let chicken = "https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken"
+    const response = await fetch(chicken);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
@@ -74,8 +74,8 @@ async function getChicken() {
 
 async function getPork() {
   try {
-    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=pork"
-    const response = await fetch(meat);
+    let pork = "https://www.themealdb.com/api/json/v1/1/filter.php?c=pork"
+    const response = await fetch(pork);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
@@ -102,8 +102,8 @@ async function getPork() {
 
 async function getLamb() {
   try {
-    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=lamb"
-    const response = await fetch(meat);
+    let lamb = "https://www.themealdb.com/api/json/v1/1/filter.php?c=lamb"
+    const response = await fetch(lamb);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
@@ -130,8 +130,8 @@ async function getLamb() {
 
 async function getSeafood() {
   try {
-    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood"
-    const response = await fetch(meat);
+    let seafood = "https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood"
+    const response = await fetch(seafood);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
       throw error(response);
