@@ -4,5 +4,6 @@
   }
 
 .cow {
+    background-size: cover;
     background-image: url("https://i.pinimg.com/originals/20/40/9e/20409e130ada17b5c9dd8598ffb585db.jpg");
   }
