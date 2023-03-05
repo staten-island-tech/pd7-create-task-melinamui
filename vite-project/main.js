@@ -14,7 +14,8 @@ async function getRecipe() {
   try {
     //meat += `https://www.themealdb.com/api/json/v1/1/filter.php?c=` + value + `${ingredient}`;
     //let meat = link += `${ingredient}`;
-    let meat = `https://www.themealdb.com/api/json/v1/1/filter.php?c=beef`
+
+    let meat = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
     const response = await fetch(meat);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
