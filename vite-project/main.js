@@ -10,9 +10,9 @@ import "./style.css";
 
 document.getElementById("beef").addEventListener("click", getBeef);
 document.getElementById("chicken").addEventListener("click", getChicken);
-document.getElementById("chicken").addEventListener("click", getPork);
-document.getElementById("chicken").addEventListener("click", getLamb);
-document.getElementById("chicken").addEventListener("click", getSeafood);
+document.getElementById("pork").addEventListener("click", getPork);
+document.getElementById("lamb").addEventListener("click", getLamb);
+document.getElementById("seafood").addEventListener("click", getSeafood);
 
 
 
