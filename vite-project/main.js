@@ -50,7 +50,7 @@ async function getBeef() {
           <button id="remove">Not a Fan</button>
           `
         );
-        document.querySelectorAll("#card").value = "";
+        document.querySelectorAll("#card").value = null;
       });
     }
   } catch (error) {
