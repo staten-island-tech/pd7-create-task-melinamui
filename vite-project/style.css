@@ -2,6 +2,7 @@
     --red : #800000;
     --black: #000000;
     --white: #ffffff;
+    --brown: #a52a2a;
 
     --background: var(--white);
     --card: var(--red);
@@ -9,7 +10,8 @@
 }
 
 .normal {
-    background-color: white;
+    background-color: var(--brown);
+    --text: var(--white);
 }
 
 .cow {
@@ -29,6 +31,7 @@
     color: var(--text);
     width: 70%;
     margin: 1rem auto;
+    border-radius: 25px
 
     display: flex;
     align-items: center;
