@@ -31,7 +31,7 @@ async function getBeef() {
       data.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
-          `<div class="red-card">
+          `<div class="card">
           <h1>${dish.strMeal}</h1>
           <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
           <button class="button" id="remove">Not a Fan</button>
