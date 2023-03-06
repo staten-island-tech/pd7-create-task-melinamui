@@ -1,7 +1,7 @@
 .normal {
     background-color: black;
-   
-  }
+    color: white;
+}
 
 .cow {
     background-size: 100%;
@@ -10,6 +10,7 @@
 
 #app {
     text-align: center;
+    font-family: "JetBrains Mono",monospace;
 }
 
 #card {
