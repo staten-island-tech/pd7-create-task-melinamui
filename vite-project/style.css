@@ -43,10 +43,11 @@
 }
 
 .header {
-    padding: 60px;
+    padding: 10px;
     text-align: center;
     background: lightseagreen;
     color: white;
+    border-radius: 25px;
   }
 
 /* CSS Button-30 by Algolia */
