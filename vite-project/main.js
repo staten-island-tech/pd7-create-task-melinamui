@@ -17,17 +17,6 @@ document.getElementById("theme").addEventListener("click", function () {
   }
 });
 
-document.getElementById("theme").addEventListener("click", function () {
-  if (document.body.classList.contains("red-card")) {
-    document.body.classList.remove("red-card");
-    document.body.classList.add("white-card")
-  } else{
-    document.body.classList.add("red-card");
-    document.body.classList.remove("white-card")
-  }
-});
-
-
 //Using an API to get Beef Recipes
 async function getBeef() {
   try {
