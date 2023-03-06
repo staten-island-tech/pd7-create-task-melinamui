@@ -14,7 +14,7 @@
     font-family: "JetBrains Mono",monospace;
 }
 
-#red-card {
+.red-card {
     background-color: maroon;
     width: 70%;
     margin: 1rem auto;
@@ -24,7 +24,7 @@
     flex-direction: column;
 }
 
-#white-card {
+.white-card {
     background-color: white;
     width: 70%;
     margin: 1rem auto;
