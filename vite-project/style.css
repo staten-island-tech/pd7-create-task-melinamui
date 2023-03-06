@@ -43,11 +43,12 @@
 }
 
 .header {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     background: lightskyblue;
-    color: white;
+    color: gray;
     border-radius: 25px;
+    margin: 1rem, auto;
   }
 
 /* CSS Button-30 by Algolia */
@@ -80,6 +81,7 @@
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 18px;
+  margin: 1rem, auto;
 }
 
 .button:focus {
