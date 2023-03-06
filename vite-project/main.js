@@ -9,11 +9,19 @@ document.getElementById("theme").addEventListener("click", function () {
   if (document.body.classList.contains("normal")) {
     document.body.classList.add("cow");
     document.body.classList.remove("normal");
-    document.body.classList.remove("red-card");
-    document.body.classList.add("white-card")
+
   } else {
     document.body.classList.add("normal");
     document.body.classList.remove("cow");
+
+  }
+});
+
+document.getElementById("theme").addEventListener("click", function () {
+  if (document.body.classList.contains("red-card")) {
+    document.body.classList.remove("red-card");
+    document.body.classList.add("white-card")
+  } else{
     document.body.classList.add("red-card");
     document.body.classList.remove("white-card")
   }
