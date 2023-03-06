@@ -3,6 +3,7 @@
     --black: #000000;
     --white: #ffffff;
     --brown: #a52a2a;
+    --gray: #808080;
 
     --background: var(--white);
     --card: var(--red);
@@ -16,7 +17,7 @@
 
 .cow {
     --text: var(--black);
-    --card: var(--white);
+    --card: var(--gray);
     background-size: 100%;
     background-image: url("https://i.pinimg.com/originals/20/40/9e/20409e130ada17b5c9dd8598ffb585db.jpg");
   }
@@ -48,7 +49,7 @@
     background: lightskyblue;
     color: black;
     border-radius: 25px;
-    margin: 2rem;
+    margin: 1rem;
   }
 
 /* CSS Button-30 by Algolia */
@@ -81,7 +82,7 @@
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 18px;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .button:focus {
