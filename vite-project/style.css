@@ -4,6 +4,7 @@
 }
 
 .cow {
+    color: black;
     background-size: 100%;
     background-image: url("https://i.pinimg.com/originals/20/40/9e/20409e130ada17b5c9dd8598ffb585db.jpg");
   }
@@ -13,7 +14,17 @@
     font-family: "JetBrains Mono",monospace;
 }
 
-#card {
+#red-card {
+    background-color: maroon;
+    width: 70%;
+    margin: 1rem auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#white-card {
     background-color: white;
     width: 70%;
     margin: 1rem auto;

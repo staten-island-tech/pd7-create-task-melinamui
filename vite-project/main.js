@@ -9,9 +9,13 @@ document.getElementById("theme").addEventListener("click", function () {
   if (document.body.classList.contains("normal")) {
     document.body.classList.add("cow");
     document.body.classList.remove("normal");
+    document.body.classList.remove("red-card");
+    document.body.classList.add("white-card")
   } else {
     document.body.classList.add("normal");
     document.body.classList.remove("cow");
+    document.body.classList.add("red-card");
+    document.body.classList.remove("white-card")
   }
 });
 
@@ -30,10 +34,10 @@ async function getBeef() {
       data.meals.forEach((dish) => {
         document.getElementById("display").insertAdjacentHTML(
           "beforeend",
-          `<div id="card">
+          `<div id="red-card">
           <h1>${dish.strMeal}</h1>
           <img id ="image" src="${dish.strMealThumb}" alt="Image of ${dish.strMeal} ">
-          <button id="remove">Not a Fan</button>
+          <button class="button" id="remove">Not a Fan</button>
           </div>
           `
         );
