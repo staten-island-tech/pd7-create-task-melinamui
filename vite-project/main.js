@@ -1,11 +1,11 @@
 import "./style.css";
 
 //Restart Button
-document.getElementById("reload").addEventListener("click", function(){
+document.getElementById("reload").addEventListener("click", function () {
   location.reload();
 });
 
-//Theme 
+//Theme
 document.getElementById("theme").addEventListener("click", function () {
   if (document.body.classList.contains("normal")) {
     document.body.classList.add("cow");
@@ -20,7 +20,7 @@ document.getElementById("theme").addEventListener("click", function () {
 async function getBeef() {
   try {
     document.getElementById("display").innerHTMl = "";
-    let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef"
+    let beef = "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef";
     const response = await fetch(beef);
     if (response.status < 200 || response.status > 299) {
       console.log(response.status);
