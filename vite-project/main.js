@@ -6,6 +6,7 @@ document.getElementById("reload").addEventListener("click", function () {
 });
 
 //Theme
+function changeTheme(){
 document.getElementById("theme").addEventListener("click", function () {
   if (document.body.classList.contains("normal")) {
     document.body.classList.add("cow");
@@ -15,6 +16,8 @@ document.getElementById("theme").addEventListener("click", function () {
     document.body.classList.remove("cow");
   }
 });
+}
+changeTheme();
 
 //Using an API to get Beef Dishes
 async function getBeef() {
